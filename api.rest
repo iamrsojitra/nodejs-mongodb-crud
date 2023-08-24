@@ -1,0 +1,33 @@
+@baseURL = http://localhost:3000
+@id = 64e75c724ff5eacbb0579c41
+###
+# Create a new post
+POST {{baseURL}}/api/posts
+Content-Type: application/json
+
+{
+  "title": "New Post",
+  "content": "This is a new post."
+}
+
+###
+# Get all posts
+GET {{baseURL}}/api/posts
+
+###
+# Get a single post
+GET {{baseURL}}/api/posts/{{id}}
+
+###
+# Update a post
+PATCH {{baseURL}}/api/posts/{{id}}
+Content-Type: application/json
+
+{
+  "title": "Updated Post",
+  "content": "This post has been updated."
+}
+
+###
+# Delete a post
+DELETE {{baseURL}}/api/posts/{{id}}

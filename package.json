@@ -1,0 +1,34 @@
+{
+  "name": "nodejs-mongodb-crud",
+  "version": "1.0.0",
+  "description": "Nodejs simple CRUD operations with ExpressJS and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vc-rakesh/nodejs-mongodb-crud.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "Rakesh Sojitra <rakesh.sojitra@viitor.cloud>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vc-rakesh/nodejs-mongodb-crud/issues"
+  },
+  "homepage": "https://github.com/vc-rakesh/nodejs-mongodb-crud#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
