@@ -5,4 +5,4 @@ Nodejs simple CRUD operations with ExpressJS and MongoDB
 `npm install`
 
 # run your node app
-`node index.js`
+`npm run start`
