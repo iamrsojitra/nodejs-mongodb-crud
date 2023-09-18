@@ -1,9 +1,33 @@
 @baseURL = http://localhost:3000
 @id = 64f0350ab14d42bd41188a7e
+@authToken = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDg2MGQ1MmQwODQ2NWFlM2U4MDE1ZCIsIm5hbWUiOiJSYWtlc2ggU29qaXRyYSIsInVzZXJuYW1lIjoidmMtcmFrZXNoIiwiaWF0IjoxNjk1MDQ4ODc4LCJleHAiOjE2OTUxMzUyNzh9.qtfYKuQwyKB99xgJEy9ES9nq5fIbetbR1OdWK9jXAos
+
+###
+# Create User
+POST {{baseURL}}/api/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Rakesh Sojitra",
+  "username": "vc-rakesh",
+  "password": "Test@123"
+}
+
+###
+# Login User
+POST {{baseURL}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "vc-rakesh",
+  "password": "Test@123"
+}
+
 ###
 # Create a new post
 POST {{baseURL}}/api/posts
 Content-Type: application/json
+Authorization: {{authToken}}
 
 {
   "title": "New Post",
@@ -17,15 +41,18 @@ Content-Type: application/json
 ###
 # Get all posts
 GET {{baseURL}}/api/posts
+Authorization: {{authToken}}
 
 ###
 # Get a single post
 GET {{baseURL}}/api/posts/{{id}}
+Authorization: {{authToken}}
 
 ###
 # Update a post
 PATCH {{baseURL}}/api/posts/{{id}}
 Content-Type: application/json
+Authorization: {{authToken}}
 
 {
   "title": "Update Post",
@@ -39,3 +66,4 @@ Content-Type: application/json
 ###
 # Delete a post
 DELETE {{baseURL}}/api/posts/{{id}}
+Authorization: {{authToken}}
